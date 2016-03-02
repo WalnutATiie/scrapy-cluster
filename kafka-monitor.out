@@ -1,0 +1,12 @@
+No handlers could be found for logger "kafka.client"
+Traceback (most recent call last):
+  File "kafka-monitor/kafka-monitor.py", line 218, in <module>
+    sys.exit(main())
+  File "kafka-monitor/kafka-monitor.py", line 205, in main
+    return kafka_monitor.run()
+  File "kafka-monitor/kafka-monitor.py", line 149, in run
+    self.setup()
+  File "kafka-monitor/kafka-monitor.py", line 45, in setup
+    self.kafka_conn.ensure_topic_exists(self.settings.KAFKA_INCOMING_TOPIC)
+  File "build/bdist.linux-x86_64/egg/kafka/client.py", line 446, in ensure_topic_exists
+kafka.common.KafkaTimeoutError: Unable to create topic demo.incoming_urls
